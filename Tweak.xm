@@ -1,3 +1,4 @@
+#include <UIKit/UIKit.h>
 #include <dlfcn.h>
 
 @interface SpringBoard : UIApplication // iOS 3 - 13
@@ -243,7 +244,7 @@ static UILongPressGestureRecognizer *RegisterLongPressGesture(UIWindow *window, 
 	});
 	return possibleSections;
 }
-
+/*
 -(NSArray<FLEXTableViewSection *> *)makeSections { // FLEX 4+
 	NSArray<FLEXTableViewSection *> *sections = %orig();
 
@@ -265,7 +266,7 @@ static UILongPressGestureRecognizer *RegisterLongPressGesture(UIWindow *window, 
 
 	return sections;
 }
-
+*/
 %new
 -(void)handleDonePressed:(id)arg1 {
 	FLEXManager *manager = GetFLXManager();
